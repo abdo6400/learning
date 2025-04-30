@@ -37,7 +37,7 @@ dependencies:
   video_player: ^2.9.2
   chewie: ^1.8.5
   awesome_dialog: ^3.2.1
-  flutter_windowmanager: ^0.2.0
+  # flutter_windowmanager: ^0.2.0
   flutter_reorderable_grid_view: ^5.4.0
   socket_io_client: ^3.0.2
 

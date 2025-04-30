@@ -46,8 +46,8 @@ class ApiKeys {
   static const String noteId = "note_id";
   static const String content = 'content';
   static const String page = 'page';
-  static const String totalPages = 'total_pages';
-  static const String hasMore = 'has_more';
+  static const String totalPages = 'totalPages';
+  static const String hasMore = 'hasMore';
   static const String lessonQuestionId = 'lesson_question_id';
   static const String question = 'question';
   static const String user = 'user';

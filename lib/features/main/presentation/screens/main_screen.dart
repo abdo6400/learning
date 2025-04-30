@@ -12,6 +12,7 @@ import '../../../../core/utils/constants.dart';
 import '../../../../core/utils/enums/string_enums.dart';
 import '../../../my_courses/presentation/bloc/my_courses_bloc.dart';
 import '../../../my_courses/presentation/screens/my_courses_screen.dart';
+import '../../../profile/presentation/screens/profile_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -43,28 +44,26 @@ class MainScreen extends StatelessWidget {
           onItemSelected: (int index) {},
           screens: [
             Card(
-              child: CustomFormBuilder(FormParams(
-                formKey: formKey,
-                fields: [
-                  for (int i = 0; i < 8; i++)
-                    FieldParams(
-                      label: StringEnums.noteTitlePlaceholder.name,
-                      icon: Icons.title_outlined,
-                      validators: [
-                        FormBuilderValidators.required(
-                            errorText: StringEnums.noteTitleRequired.name.tr()),
-                      ],
-                    ),
-                ],
-              )),
-            ),
+                // child: CustomFormBuilder(FormParams(
+                //   formKey: formKey,
+                //   fields: [
+                //     for (int i = 0; i < 8; i++)
+                //       FieldParams(
+                //         label: StringEnums.noteTitlePlaceholder.name,
+                //         icon: Icons.title_outlined,
+                //         validators: [
+                //           FormBuilderValidators.required(
+                //               errorText: StringEnums.noteTitleRequired.name.tr()),
+                //         ],
+                //       ),
+                //   ],
+                // )),
+                ),
             MyCoursesScreen(),
             Card(
               child: Text("data3"),
             ),
-            Card(
-              child: Text("data4"),
-            ),
+            ProfileScreen()
           ],
           items: iconList
               .map((e) => PersistentBottomNavBarItem(

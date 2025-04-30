@@ -21,5 +21,5 @@ class QuestionsAndAnswersState extends Equatable {
   }
 
   @override
-  List<Object> get props => [questions!, stateEnums, errorMessage!];
+  List<Object?> get props => [questions, stateEnums, errorMessage];
 }

@@ -25,7 +25,7 @@ extension ToastMessage on BuildContext {
 
   void showCustomToast({
     required Widget child,
-    Widget Function(BuildContext, Widget)? positionedToastBuilder,
+    Widget Function(BuildContext, Widget,ToastGravity?)? positionedToastBuilder,
     Duration toastDuration = const Duration(seconds: 2),
     ToastGravity? gravity,
     Duration fadeDuration = const Duration(milliseconds: 350),
@@ -39,7 +39,7 @@ extension ToastMessage on BuildContext {
       toastDuration: toastDuration,
       fadeDuration: fadeDuration,
       gravity: gravity,
-      isDismissable: isDismissable,
+      isDismissible: isDismissable,
     );
   }
 

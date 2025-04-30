@@ -106,11 +106,7 @@ class CourseNotes extends StatelessWidget {
           },
         );
       }
-      if (state.notes.isEmpty && state.stateEnums != StateEnum.loading) {
-        return Container(
-            margin: const EdgeInsets.all(15),
-            child: AddNoteCard(() => _onAddNote(context)));
-      }
+     
       return Skeletonizer(
         enabled: state.stateEnums == StateEnum.loading,
         child: ResponsiveGridView.builder(
