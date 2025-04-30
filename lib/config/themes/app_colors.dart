@@ -6,7 +6,7 @@ class AppColors {
   static const Color secondary = Color(0xffDA4453); // Matches --secondary-color
 
   //* Background and Text Colors
-  static const Color backgroundLight = Color(0xFFF8F8F8); // --background-color (light)
+  static const Color backgroundLight = Color.fromARGB(255, 255, 255, 255); // --background-color (light)
   static const Color backgroundDark = Color(0xff202020); // --background-color (dark mode)
   static const Color textLight = Color(0xff000000); // --text-color (light)
   static const Color textDark = Color(0xffffffff); // --text-color (dark mode)

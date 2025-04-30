@@ -27,7 +27,7 @@ class AppLocator {
   static Future<void> init() async {
     //my-courses
     locator
-        .registerLazySingleton<MyCoursesBloc>(() => MyCoursesBloc(locator()));
+        .registerFactory<MyCoursesBloc>(() => MyCoursesBloc(locator()));
     locator.registerLazySingleton<GetMyCoursesUseCase>(
         () => GetMyCoursesUseCase(locator()));
     locator.registerLazySingleton<MyCoursesRepository>(
@@ -36,7 +36,7 @@ class AppLocator {
         () => MyCoursesRemoteDataSourceImpl(apiConsumer: locator()));
 
     //course
-    locator.registerLazySingleton<CourseBloc>(() => CourseBloc(locator()));
+    locator.registerFactory<CourseBloc>(() => CourseBloc(locator()));
     locator.registerLazySingleton<GetCourseDetailsUseCase>(
         () => GetCourseDetailsUseCase(locator()));
     locator.registerLazySingleton<CourseRepository>(
@@ -45,7 +45,7 @@ class AppLocator {
         () => CourseRemoteDataSourceImpl(apiConsumer: locator()));
 
     //notes
-    locator.registerLazySingleton<NotesBloc>(
+    locator.registerFactory<NotesBloc>(
         () => NotesBloc(locator(), locator(), locator(), locator()));
     locator
         .registerLazySingleton<AddNoteUsecase>(() => AddNoteUsecase(locator()));
@@ -59,7 +59,7 @@ class AppLocator {
         () => NotesRepositoryImpl(notesRemoteDataSource: locator()));
     locator.registerLazySingleton<NotesRemoteDataSource>(
         () => NotesRemoteDataSourceImpl(apiConsumer: locator()));
-    locator.registerLazySingleton<QuestionsAndAnswersBloc>(
+    locator.registerFactory<QuestionsAndAnswersBloc>(
         () => QuestionsAndAnswersBloc(locator()));
     locator.registerLazySingleton<GetQuestionsUsecase>(
         () => GetQuestionsUsecase(locator()));

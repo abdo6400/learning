@@ -24,7 +24,7 @@ class CustomSignButton extends StatelessWidget {
           textStyle: WidgetStatePropertyAll(
             Theme.of(context).textTheme.bodyLarge!.copyWith(
                   color: Colors.white,
-                  fontSize: context.ResponsiveValu(14,
+                  fontSize: context.ResponsiveValu(16,
                       mobile: 10, tablet: 20, desktop: 24),
                 ),
           )),
@@ -33,6 +33,7 @@ class CustomSignButton extends StatelessWidget {
       },
       child: Row(
         mainAxisSize: MainAxisSize.min,
+        spacing: 20,
         children: [
           Text(
             buttonLabel.tr(),

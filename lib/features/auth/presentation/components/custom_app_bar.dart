@@ -39,6 +39,7 @@ class CustomAppBar extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.language_rounded,
+                    color: Theme.of(context).primaryColor,
                     size: context.ResponsiveValu(20,
                         mobile: 12, tablet: 25, desktop: 30),
                   ),

@@ -13,7 +13,7 @@ class SignWithSocial extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        elevation: 0.5,
+        elevation: 0.2,
         foregroundColor: Theme.of(context).textTheme.bodyLarge!.color,
         backgroundColor: Theme.of(context).canvasColor,
         textStyle: Theme.of(context).textTheme.bodyLarge,
